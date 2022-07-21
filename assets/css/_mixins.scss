@@ -1,0 +1,22 @@
+/* MARGIN PADDING MIXIN */
+@mixin margin-padding($m-direction, $m-amount, $p-direction, $p-amount)
+{
+    @if $m-direction==all
+    {
+        margin:$m-amount;
+    }
+    @else
+    {
+        margin-#{$m-direction}:$m-amount;  
+    }
+
+
+    @if $p-direction==all
+    {
+       padding:$p-amount;
+    }
+    @else
+    {
+        padding-#{$p-direction}:$p-amount;  
+    }
+}

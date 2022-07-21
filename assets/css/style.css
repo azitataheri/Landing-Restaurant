@@ -1,5 +1,168 @@
 @import url(../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css);
+@import url(../../node_modules/bootstrap/dist/css/bootstrap-utilities.min.css);
 @import url(../../node_modules/@fortawesome/fontawesome-free/css/all.min.css);
+@font-face {
+  font-family: Catamaran;
+  src: url("../../assets/fonts/Catamaran-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* MARGIN PADDING MIXIN */
+.header {
+  background-image: url(../img/header-bg.png);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* PRIMARY HEADER */
+}
+
+.header .primary-header {
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* HAMBURGER ICON */
+  /* ADD THE CLOSE ICON */
+  /*  PRIMARY NAVIGATION  */
+}
+
+.header .primary-header .mobile-nav-toggle {
+  display: none;
+}
+
+.header .primary-header .mobile-nav-toggle[aria-expanded="true"] {
+  background-image: url(../img/close.png);
+}
+
+.header .primary-header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .primary-header ul.primary-navigation[data-visible="true"] {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.header .primary-header ul.primary-navigation > li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.header .primary-header ul.primary-navigation > li a {
+  font-size: 19px;
+  font-family: Catamaran;
+  color: #fff;
+  padding: 0 30px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+  .header {
+    background-position: center;
+    background-size: cover;
+    /* PRIMARY HEADER */
+  }
+  .header .primary-header {
+    padding-top: 40px;
+    /* LOGO */
+  }
+  .header .primary-header .logo {
+    width: 120px;
+    height: 80px;
+    margin: 0 0 0 20px;
+  }
+  .header .primary-header ul.primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: linear-gradient(100deg, #000000 0%, rgba(0, 0, 0, 0.7) 100%);
+    -webkit-transform: translateX(-143%);
+            transform: translateX(-143%);
+    -webkit-transition: -webkit-transform 400ms ease-in-out;
+    transition: -webkit-transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+    padding: 140px 50px;
+  }
+  .header .primary-header ul.primary-navigation > li {
+    padding: 20px 30px;
+  }
+  .header .primary-header ul.primary-navigation > li a {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .header .primary-header ul.primary-navigation > li a.active {
+    color: #FF4800;
+  }
+  .header .primary-header .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    background-image: url("../../assets/img/bar.png");
+    background-size: cover;
+    border: none;
+    top: 70px;
+    right: 50px;
+    width: 28px;
+    aspect-ratio: 1;
+    z-index: 9999;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .header {
+    background-position: center;
+    /* PRIMARY HEADER */
+  }
+  .header .primary-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 0;
+  }
+  .header .primary-header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .primary-header ul.primary-navigation li a.active {
+    border-bottom: 2px solid #FF4800;
+  }
+}
+
+@media (min-width: 1001px) {
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  ul.primary-navigation li a.active {
+    border-bottom: 2px solid #FF4800;
+  }
+}
+
+/*Reset*/
 *,
 ::before,
 ::after {
@@ -7,5 +170,18 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

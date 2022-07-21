@@ -1,0 +1,7 @@
+$primaryFontUrl: '../../assets/fonts';
+@font-face {
+    font-family: Catamaran;
+    src: url("#{$primaryFontUrl}/Catamaran-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
