@@ -1,7 +1,11 @@
+/* BREAKPOINTS */
+
 @media (max-width : 767px) {
     .header {
-        background-position: center;
-        background-size: cover;
+            background-position: center;
+            background-size: cover;
+            min-height: fit-content;
+            max-height: 100vh;
 
         /* PRIMARY HEADER */
         .primary-header {
@@ -29,11 +33,13 @@
                         @include margin-padding(null, null, all, 20px 30px);
 
                         a {
-                            text-transform: uppercase;
                             text-align: center;
-
+                            text-transform: capitalize;
                             &.active {
-                                color: $color-primary-lighter;
+                                border-bottom: none !important;
+                                @include margin-padding(null, null, all, 0 0 0 20px);
+                                color: $color-primary-lighter !important;
+                                font-size: ($base-font-size) - 6;
                             }
                         }
                     }
@@ -53,12 +59,28 @@
                 z-index: 9999;
             }
         }
+
+
+        .discription {
+            @include margin-padding(all, 80px 0 0 0, null, null);
+
+            &__btn-group {
+                & button {
+                    &:last-child {
+                        @include margin-padding(top, 0, null, null);
+                    }
+                }
+            }
+        }
     }
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
     .header {
-        background-position: center;
+            background-position: center;
+            background-size: cover;
+            min-height: fit-content;
+            max-height: 100vh;
 
         /* PRIMARY HEADER */
         .primary-header {
@@ -82,21 +104,67 @@
             }
         }
 
+
+        .discription {
+            @include margin-padding(all, 50px 0 0 0, null, null);
+        }
     }
 }
 
-@media (min-width: 1001px) {
-    ul {
-        display: flex;
+@media (min-width: 1001px) and ( max-width: 1500px ) {
+    .header {
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        ul {
+            display: flex;
 
-        &.primary-navigation {
-            li {
-                a {
-                    &.active {
-                        border-bottom: 2px solid $color-primary-lighter;
+            &.primary-navigation {
+                li {
+                    a {
+                        &.active {
+                            border-bottom: 2px solid $color-primary-lighter;
+                        }
                     }
                 }
             }
         }
+
+        .discription {
+            @include margin-padding(all, -20px 0 0 0 , null, null);
+        }
     }
 }
+
+@media (min-width: 1501px) and ( max-width: 1700px ) {
+    .header {
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        ul {
+            display: flex;
+
+            &.primary-navigation {
+                li {
+                    a {
+                        &.active {
+                            border-bottom: 2px solid $color-primary-lighter;
+                        }
+                    }
+                }
+            }
+        }
+
+        .discription {
+            @include margin-padding(all, 100px 0 0 0 , null, null);
+        }
+    }
+}
+
+
+@media ( min-width: 1701px ){
+    .discription {
+        @include margin-padding(all, 200px 0 0 0 , null, null);
+    }
+}
+

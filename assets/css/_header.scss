@@ -1,8 +1,8 @@
 .header {
     background-image: url(../img/header-bg.png);
-    height: 100vh;
-    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    height: 100vh;
 
     /* PRIMARY HEADER */
     .primary-header {
@@ -41,7 +41,11 @@
                         font-family: $primary-font-family;
                         color: $color-white;
                         @include margin-padding(null, null, all, 0 30px);
-                        text-transform: capitalize;
+                        text-transform: uppercase;
+                        &.active{
+                            border-bottom: 2px solid $color-primary-lighter;
+                            padding: 0;
+                        }
                     }
                 }
             }
