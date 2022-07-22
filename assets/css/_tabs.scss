@@ -1,0 +1,77 @@
+.tabs {
+    @include margin-padding(top, $sections-seprator-space , all, 100px);
+    border: 1px solid $container-border-color;
+    background-color: $color-grey-dark;
+    &__title {
+        ul {
+            list-style: none;
+            padding: 0;
+            color: #fff;
+
+            li {
+                display: inline-flex;
+
+                a {
+                    text-decoration: none;
+                    color: darkgray;
+                    padding: 10px;
+                    transition: all .3s ease-in-out;
+                    border-bottom: 1px solid transparent;
+                    font-family: $primary-font-family;
+
+                    &:hover {
+                        color: gray;
+                    }
+                }
+            }
+        }
+        .tabs-intro{
+            color: $color-white;
+            font-size: ($base-font-size) + 3px;
+            font-family: $secondary-font-family-light;
+            span:first-child{
+                border-bottom: 2px solid $color-primary-lighter;
+            }
+        }
+    }
+
+    .nav .active a {
+        color: $color-primary-lighter;
+        border-bottom: 1px dashed $color-grey;
+    }
+
+    &__content {
+        @include margin-padding(null, null, top, 80px);
+        .tab-pane {
+            display: none;
+        }
+
+        hr{
+            border-color: $color-grey;
+            height: .3px;
+            @include margin-padding(all, 5px 0 0 0, null, null)
+        }
+
+        &__disc{
+            color: $color-white;
+            font-family: $secondary-font-family-light;
+            font-size: ($base-font-size) - 10px;
+            @include margin-padding(null, null, all, 10px 0);
+
+            &__subtitle{
+                color: $color-grey-light;
+                font-family: $primary-font-family;
+            }
+
+            &__number{
+                color: $color-grey-light;
+            }
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+    }
+
+}

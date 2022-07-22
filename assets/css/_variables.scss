@@ -6,6 +6,8 @@ $color-secondary: #181110;
 $color-white: #fff;
 $color-grey:  #404040;
 $color-dark: #000;
+$color-grey-dark: #181110;
+$color-grey-light: #A3A3A3;
 
 
 
@@ -13,6 +15,14 @@ $color-dark: #000;
 $base-font-size: 22px;
 
 
-//Fonts Family
+//FONST FAMILY
 $primary-font-family: Catamaran;
-$secondary-font-family: RobotoSlab;
+$secondary-font-family-bold: RobotoSlab-Bold;
+$secondary-font-family-light: RobotoSlab-Light;
+
+// SPACING
+$sections-seprator-space: 100px;
+
+
+// BODRER COLORS
+$container-border-color: #8D8D8D;
