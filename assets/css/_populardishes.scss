@@ -1,0 +1,71 @@
+.popular{
+    @include margin-padding(top, $sections-seprator-space , all, 100px);
+    border: 1px solid $container-border-color;
+    background-color: $color-grey-dark;
+    color: $color-white;
+
+    /* TITLE */
+    &__title{
+        font-family: $secondary-font-family-light;
+        font-size: ($base-font-size) + 3px ;
+        span:first-child{
+            border-bottom: 2px solid $color-primary-lighter;
+        }
+    }
+
+    /* SLIDER */
+    .slider{
+        display: block;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+
+        .slide{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__img{
+                width: 100%;
+                margin: 0 auto;
+                height: 100%;
+                padding: 40px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &__text{
+                padding: 80px;
+                display: flex;
+                flex-direction: column;
+                font-family: $primary-font-family;
+                p:first-child{
+                    font-family: $secondary-font-family-light;
+                    padding-bottom: 20px;
+                    font-size: ($base-font-size);
+                }
+            }
+        }
+
+        /* BTNS FOR SWITCH THE SILDES */
+        .buttons{
+            position: absolute;
+            .next::after,
+            .prev::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        
+            .prev, .next{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

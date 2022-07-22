@@ -20,19 +20,18 @@
             <div class="container primary-header">
                 <!-- Start Navbar -->
                 <div>
-                    <img src="./assets/img/logo.png" alt="logo" class="logo">
+                    <img src="./assets/img/logo.png" alt="website logo" class="logo">
                 </div>
                 <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                     <span class="sr-only">Menu</span>
                 </button>
                 <nav>
                     <ul id="primary-navigation" class="primary-navigation" data-visible="false">
-                        <li><a href="" class="active">why us</a></li>
-                        <li><a href="">menu</a></li>
-                        <li><a href="">popukar dishes</a></li>
-                        <li><a href="">book</a></li>
-                        <li><a href="">contact</a></li>
-                        <li><a href=""></a></li>
+                        <li><a class="active">why us</a></li>
+                        <li><a href="#ourmenu">menu</a></li>
+                        <li><a href="#populardishes">popukar dishes</a></li>
+                        <li><a href="#book">book</a></li>
+                        <li><a>contact</a></li>
                     </ul>
                 </nav>
                 <!-- End Navbar -->
@@ -67,7 +66,7 @@
         <div class="container-fluid p-0">
 
             <!-- Start Our Menu Section  -->
-            <section>
+            <section id="ourmenu">
                 <div class="container tabs">
                     <!-- Tabs -->
                     <div class="d-flex align-items-center justify-content-between tabs__title">
@@ -514,14 +513,75 @@
 
 
             <!-- Start The Most Popular Section  -->
-            <section>
-                
+            <section id="populardishes">
+                <div class="container popular">
+
+                    <!-- prev and next btns for switch the slider -->
+                    <div class="buttons d-flex justify-content-between w-100">
+                        <p class="popular__title"><span>Th</span>e Most P<span>op</span>ular Dishes </p>
+                        <div class="d-flex">
+                            <a class="next px-3"><i class="fas fa-arrow-right"></i></a>
+                            <span>1</span><span>/3</span>
+                            <a class="prev px-3"><i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                    <div class="slider">
+                    
+                        <!-- slide 1 -->
+                        <div class="slide slide-1">
+                            <div class="d-flex-column d-xl-flex">
+                                <div class="slide__img">
+                                    <img src="./assets/img/dish1.png">
+                                </div>
+                                <div class="slide__text">
+                                    <p>Sweet and sour pork</p>
+                                    <p>Sweet and Sour Pork Tenderloin is one of the classic cuisines in China. Pork tenderloin is the main material of this dish. 
+                                        The dish tastes sour and sweet, but also crispy outside and soft inside, which can stimulate people’s appetite. </p>
+                                    <p>35$</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- slide 2 -->
+                        <div class="slide slide-2">
+                            <div class="d-flex-column d-xl-flex">
+                                <div class="slide__img">
+                                    <img src="./assets/img/dish2.jpg">
+                                </div>
+                                <div class="slide__text">
+                                    <p>Popular european foods</p>
+                                    <p>Sweet and Sour Pork Tenderloin is one of the classic cuisines in China. Pork tenderloin is the main material of this dish. 
+                                        The dish tastes sour and sweet, but also crispy outside and soft inside, which can stimulate people’s appetite. </p>
+                                    <p>35$</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- slide 3 -->
+                        <div class="slide slide-3">
+                            <div class="d-flex-column d-xl-flex">
+                                <div class="slide__img">
+                                    <img src="./assets/img/dish3.jpg">
+                                </div>
+                                <div class="slide__text">
+                                    <p>Yummy and sour foods</p>
+                                    <p>Sweet and Sour Pork Tenderloin is one of the classic cuisines in China. Pork tenderloin is the main material of this dish. 
+                                        The dish tastes sour and sweet, but also crispy outside and soft inside, which can stimulate people’s appetite. </p>
+                                    <p>35$</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                  
+                </div>
             </section>
             <!-- End The Most Popular Section  -->
 
 
             <!-- Start Book a Table -->
-            <section class="book">
+            <section class="book" id="book">
                 <div class="container">
                     <!-- Book -->
                     <div class="row">
@@ -597,11 +657,11 @@
                 </div>
             </section>
             <!-- End Book a Table  -->
+
         </div>
 
     </main>
     <!-- End Main -->
-
 
     <!-- Scripts -->
     <script src="./assets/js/app.js"></script>

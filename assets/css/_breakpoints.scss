@@ -1,17 +1,18 @@
 /* BREAKPOINTS */
-@media (max-width: 400px){
-    .tabs{
-        &__title{
-            ul{
+@media (max-width: 400px) {
+    .tabs {
+        &__title {
+            ul {
                 padding-top: 20px;
                 display: flex;
                 flex-direction: column;
             }
         }
 
-        &__content{
+        &__content {
             @include margin-padding(null, null, top, 50px);
-            &__disc{
+
+            &__disc {
                 display: flex;
                 flex-direction: column;
                 text-align: center;
@@ -19,13 +20,15 @@
         }
     }
 
-    .book{
+    .book {
         margin-top: 0;
-        &__title{
+
+        &__title {
 
             span:first-child {
                 border-bottom: none;
             }
+
             span:last-child {
                 border-bottom: 2px solid $color-primary-lighter;
             }
@@ -35,10 +38,10 @@
 
 @media (max-width : 767px) {
     .header {
-            background-position: center;
-            background-size: cover;
-            min-height: fit-content;
-            max-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        min-height: fit-content;
+        max-height: 100vh;
 
         /* PRIMARY HEADER */
         .primary-header {
@@ -68,6 +71,7 @@
                         a {
                             text-align: center;
                             text-transform: capitalize;
+
                             &.active {
                                 border-bottom: none !important;
                                 @include margin-padding(null, null, all, 0 0 0 20px);
@@ -107,38 +111,72 @@
         }
     }
 
-    .tabs{
-        @include margin-padding(top, $sections-seprator-space , all, 50px);
-        &__title{
+    .tabs {
+        @include margin-padding(top, $sections-seprator-space, all, 50px);
+
+        &__title {
             display: flex;
             flex-direction: column;
-            ul{
+
+            ul {
                 padding-top: 20px;
             }
-            .tabs-intro{
-                span:first-child{
+
+            .tabs-intro {
+                span:first-child {
                     border-bottom: none;
                 }
-                span:last-child{
+
+                span:last-child {
                     border-bottom: 2px solid $color-primary-lighter !important;
                 }
             }
         }
 
-        &__content{
+        &__content {
             @include margin-padding(null, null, top, 50px);
         }
     }
 
-    .book{
+    .book {
         margin-top: 0;
-        &__title{
-            
+
+        &__title {
+
             span:first-child {
                 border-bottom: none;
             }
+
             span:last-child {
                 border-bottom: 2px solid $color-primary-lighter;
+            }
+        }
+    }
+
+    .popular {
+        &__title {
+            padding-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span:first-child {
+                border-bottom: none;
+            }
+
+            span:last-child {
+                border-bottom: 2px solid $color-primary-lighter;
+            }
+        }
+
+        .slider {
+            .slide {
+                &__text {
+                    padding: 0;
+                }
             }
         }
     }
@@ -146,10 +184,10 @@
 
 @media (min-width: 768px) and (max-width: 1000px) {
     .header {
-            background-position: center;
-            background-size: cover;
-            min-height: fit-content;
-            max-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        min-height: fit-content;
+        max-height: 100vh;
 
         /* PRIMARY HEADER */
         .primary-header {
@@ -179,31 +217,36 @@
         }
     }
 
-    .tabs{
-        .tabs__title{
+    .tabs {
+        .tabs__title {
             display: flex;
             flex-direction: column;
-            ul{
+
+            ul {
                 padding-top: 20px;
             }
-            .tabs-intro{
-                span:first-child{
+
+            .tabs-intro {
+                span:first-child {
                     border-bottom: none;
                 }
-                span:last-child{
+
+                span:last-child {
                     border-bottom: 2px solid $color-primary-lighter !important;
                 }
             }
         }
     }
 
-    .book{
+    .book {
         margin-top: 0;
-        &__title{
-            
+
+        &__title {
+
             span:first-child {
                 border-bottom: none;
             }
+
             span:last-child {
                 border-bottom: 2px solid $color-primary-lighter;
             }
@@ -211,11 +254,12 @@
     }
 }
 
-@media (min-width: 1001px) and ( max-width: 1500px ) {
+@media (min-width: 1001px) and (max-width: 1500px) {
     .header {
         background-position: center;
         background-size: cover;
         height: 100vh;
+
         ul {
             display: flex;
 
@@ -231,16 +275,17 @@
         }
 
         .discription {
-            @include margin-padding(all, -20px 0 0 0 , null, null);
+            @include margin-padding(all, -20px 0 0 0, null, null);
         }
     }
 }
 
-@media (min-width: 1501px) and ( max-width: 1700px ) {
+@media (min-width: 1501px) and (max-width: 1700px) {
     .header {
         background-position: center;
         background-size: cover;
         height: 100vh;
+
         ul {
             display: flex;
 
@@ -256,15 +301,14 @@
         }
 
         .discription {
-            @include margin-padding(all, 100px 0 0 0 , null, null);
+            @include margin-padding(all, 100px 0 0 0, null, null);
         }
     }
 }
 
 
-@media ( min-width: 1701px ){
+@media (min-width: 1701px) {
     .discription {
-        @include margin-padding(all, 200px 0 0 0 , null, null);
+        @include margin-padding(all, 200px 0 0 0, null, null);
     }
 }
-
