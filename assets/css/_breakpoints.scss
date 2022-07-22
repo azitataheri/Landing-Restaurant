@@ -18,6 +18,19 @@
             }
         }
     }
+
+    .book{
+        margin-top: 0;
+        &__title{
+
+            span:first-child {
+                border-bottom: none;
+            }
+            span:last-child {
+                border-bottom: 2px solid $color-primary-lighter;
+            }
+        }
+    }
 }
 
 @media (max-width : 767px) {
@@ -116,6 +129,19 @@
             @include margin-padding(null, null, top, 50px);
         }
     }
+
+    .book{
+        margin-top: 0;
+        &__title{
+            
+            span:first-child {
+                border-bottom: none;
+            }
+            span:last-child {
+                border-bottom: 2px solid $color-primary-lighter;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1000px) {
@@ -167,6 +193,19 @@
                 span:last-child{
                     border-bottom: 2px solid $color-primary-lighter !important;
                 }
+            }
+        }
+    }
+
+    .book{
+        margin-top: 0;
+        &__title{
+            
+            span:first-child {
+                border-bottom: none;
+            }
+            span:last-child {
+                border-bottom: 2px solid $color-primary-lighter;
             }
         }
     }

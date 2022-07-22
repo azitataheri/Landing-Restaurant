@@ -64,7 +64,7 @@
 
     <!-- Start Main -->
     <main>
-        <div class="container-fluid">
+        <div class="container-fluid p-0">
 
             <!-- Start Our Menu Section  -->
             <section>
@@ -515,14 +515,86 @@
 
             <!-- Start The Most Popular Section  -->
             <section>
-
+                
             </section>
             <!-- End The Most Popular Section  -->
 
 
             <!-- Start Book a Table -->
-            <section>
+            <section class="book">
+                <div class="container">
+                    <!-- Book -->
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-7">
+                            <div class="book__title">
+                                <div class="book__title__primary">
+                                    <p><span>Bo</span>ok <span>a</span> Table</p>
+                                </div>
+                                <div class="book__title__secondary">
+                                    <p>
+                                        When we first opened our restaturant, it
+                                        <div> didn't take a long time for</div>
+                                          us to prove our diffrence. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-xl-5">
+                            <!--  Book Form -->
+                            <div class="book-form">
+                                <form id="form">
 
+                                    <!-- name input -->
+                                    <div class="d-flex flex-column">
+                                        <label for="name">your name</label>
+                                        <input type="text" id="name">
+                                    </div>
+
+                                    <!-- phone input -->
+                                    <div class="d-flex flex-column py-3">
+                                        <label for="phone">your phone</label>
+                                        <input type="text" id="phone">
+                                    </div>
+
+                                    <!-- email input -->
+                                    <div class="d-flex flex-column">
+                                        <label for="email">your email</label>
+                                        <input type="email" id="email">
+                                    </div>
+
+                                    <!-- date input -->
+                                    <div class="d-flex flex-column py-3">
+                                        <label for="date">date</label>
+                                        <input type="date" id="date" class="text-light">
+                                    </div>
+
+                                    <!-- time input-->
+                                    <div class="d-flex flex-column">
+                                        <label for="appt">time</label>
+                                        <input type="time" id="appt" class="text-light" value="18:00">
+                                    </div>
+
+                                    <!-- number input -->
+                                    <div class="d-flex flex-column py-4">
+                                        <label for="">number of people</label>
+                                        <div class="input-number-wrapper d-flex justify-content-center">
+                                          <span class="decrease"><i class="fa fa-minus"></i></span>
+                                          <input type="number" value="2" min="2" max="10" class="w-100 border-0"/>
+                                          <span class="increase"><i class="fa fa-plus"></i></span>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <button type="submit" class="text-uppercase d-block w-100 book-btn">
+                                            book now
+                                        </button>
+                                      </div>
+                                </form>
+                            </div>
+                            <!--  / Book Form -->
+                        </div>
+                    </div>
+                    <!-- / Book -->
+                </div>
             </section>
             <!-- End Book a Table  -->
         </div>

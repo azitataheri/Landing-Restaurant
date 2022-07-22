@@ -1,0 +1,100 @@
+.book {
+    background-image: url(../img/book-table.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    @include margin-padding(top, 150px, null, null);
+
+    &__title {
+        color: $color-white;
+        @include margin-padding(null, null, all, 100px 80px);
+
+        &__primary {
+            font-family: $secondary-font-family-light;
+            font-size: ($base-font-size) + 3px;
+
+            span:first-child {
+                border-bottom: 2px solid $color-primary-lighter;
+            }
+        }
+
+        &__secondary {
+            font-family: $primary-font-family;
+            font-size: ($base-font-size) - 9px;
+            padding-top: 30px;
+        }
+    }
+
+    /* BOOK FORM */
+    .book-form {
+        border: 1px solid $container-border-color;
+        background-color: $color-grey-dark;
+        @include margin-padding(null, null, all, 80px);
+
+        form {
+            label {
+                color: $color-grey-light;
+                text-transform: uppercase;
+                font-family: $primary-font-family;
+                font-size: ($base-font-size) - 7px;
+                font-weight: thin;
+            }
+
+            input {
+                background-color: $color-grey-input-filler;
+                border: .2px solid $color-grey;
+                line-height: 43px;
+                margin: 5px 0;
+                padding: 0 10px;
+
+                &:focus {
+                    outline: none;
+                    caret-color: $color-primary-lighter;
+                    color: $color-grey-light;
+                    font-family: $primary-font-family;
+                }
+            }
+
+            .input-number-wrapper {
+                border: .2px solid $color-grey;
+
+                span {
+                    background-color: $color-grey-input-filler;
+                    padding: 10px;
+                    color: $color-white;
+                }
+
+                input {
+                    margin: 0;
+                    text-align: center;
+                    line-height: 43px;
+                    color: $color-white;
+
+                    /* prefixes=> Chrome, Safari, Edge, Opera */
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+
+                    /* prefixes=> Firefox */
+                    &[type=number] {
+                        -moz-appearance: textfield;
+                    }
+                }
+            }
+
+            .book-btn {
+                background-color: $color-primary-lighter;
+                border-radius: 3px;
+                line-height: 45px;
+                border: none;
+                outline: none;
+                color: $color-white;
+                font-family: $primary-font-family;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+        }
+    }
+}
